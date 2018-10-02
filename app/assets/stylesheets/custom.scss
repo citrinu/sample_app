@@ -1,7 +1,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
 /*universal */
+
+$light-grey: #777;
+$grey-medium-light: #eaeaea;
 
 body
 {
@@ -23,6 +27,8 @@ textarea
   resize: vertical;
 }
 
+
+/*
 .center
 {
   text-align: center;
@@ -32,6 +38,20 @@ textarea
 {
   margin-bottom: 10px;
 }
+*/
+
+//scss version
+.center
+{
+  text-align: center;
+
+  .h1
+  {
+    margin-bottom: 10px;
+  }
+}
+
+
 
 /* text* */
 
@@ -55,7 +75,7 @@ h2
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #777;
+  color: light-grey;
 }
 
 p
@@ -67,6 +87,7 @@ p
 
 /* header */
 
+/*
 #logo{
   float: left;
   margin-right: 10px;
@@ -83,9 +104,30 @@ p
   color: #fff;
   text-decoration: none;
 }
+*/
+
+#logo{
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+
+  &:hover
+  {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+
 
 /* footer */
 
+/*
 footer {
   margin-top: 45px;
   padding-top: 5px;
@@ -113,4 +155,43 @@ footer ul {
 footer ul li {
   float: left;
   margin-left: 15px;
+}
+*/
+
+
+
+footer
+{
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $grey-medium-light;
+  color: light-grey;
+
+  a{
+      color: $gray;
+
+      &:hover {
+        color: $gray-darker;
+      }
+  }
+
+  small
+  {
+    float: left;
+  }
+
+  ul
+  {
+    float: right;
+    list-style: none;
+
+    li
+    {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+
+
+
 }
