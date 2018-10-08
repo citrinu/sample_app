@@ -7,7 +7,8 @@ class UserTest < ActiveSupport::TestCase
 
   #gets run before each test
   def setup
-    @user = User.new(name: "Test Man", email: "test@email.com")
+    @user = User.new(name: "Test Man", email: "test@email.com",
+                      password: "foobar", password_confirmation: "foobar")
   end
 
   #tests if a valid user was created
@@ -62,6 +63,18 @@ class UserTest < ActiveSupport::TestCase
     @user.save #saves it to the db
     assert_not duplicate_user.valid?
   end
+
+  test "password shoul be present" do
+    #password must be equal to conf equal to nonblank 6 chars min
+    #compact multiple assignment
+    @user.password = @user.password_confirmation = " " * 6
+    assert_not @user.valid?
+  end
+
+ test "password should have min length" do
+   @user.password = @user.password_confirmation = "a" * 5
+   assert_not @user.valid?
+ end
 
 
 
