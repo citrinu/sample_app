@@ -20,4 +20,7 @@ Rails.application.routes.draw do
 
   get 'signup', to: 'users#new' # correct way
 
+  #adds a full restful url
+  resources :users
+
 end
