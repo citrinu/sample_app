@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   #wrong way, had it backwards
 
   get 'signup', to: 'users#new' # correct way
+  post 'signup', to: 'users#create'
 
   #adds a full restful url
   resources :users
