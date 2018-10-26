@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-  get 'sessions/new'
+
 
   #main page
   root 'static_pages#home'
@@ -25,5 +25,10 @@ Rails.application.routes.draw do
 
   #adds a full restful url
   resources :users
+
+  #login page
+  get '/login', to:'sessions#new'
+  post '/login', to:'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
 
 end
