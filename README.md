@@ -1,6 +1,6 @@
 # README
 
-Progress: Chapter 8 65% done.
+Progress: Chapter 9 0% done.
 
 Finished:
 
