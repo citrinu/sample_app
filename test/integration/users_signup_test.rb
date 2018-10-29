@@ -30,6 +30,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
       follow_redirect! # checks for a redirect
       assert_template 'users/show' #checks that it renders using the show action
       assert_not flash.empty?
+      assert is_logged_in?
   end
 
 end

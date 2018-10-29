@@ -7,3 +7,14 @@
 #two:
 #  name: MyString
 #  email: MyString
+
+#this is a fake user
+#a fixture used by the test to insert fake data into the database
+#user = users(:michael) how to call in a test
+
+michael:
+  name: Michael Example
+  email: michael@example.com
+  #this calls the secure password method defined in User.rb
+
+  password_digest: <%= User.digest('password') %>
