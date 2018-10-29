@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Progress: Chapter 8 65% done.
 
-Things you may want to cover:
+Finished:
 
-* Ruby version
+* Homepage
 
-* System dependencies
+* Login Based Header
 
-* Configuration
+* Sign up
 
-* Database creation
+* Login
 
-* Database initialization
+* Database initialization + User Model
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+* Tests
 
 * ...
