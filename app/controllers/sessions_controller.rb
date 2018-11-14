@@ -13,6 +13,7 @@ class SessionsController < ApplicationController
       #redirect to the users page
       #user_url(user) wwww.test.com/user/id
       log_in user
+      remember user #start creating the cookie
       redirect_to user
     else
       #error message
@@ -23,7 +24,7 @@ class SessionsController < ApplicationController
 
 
   def destroy
-    log_out
+    log_out if logged_in?
     redirect_to root_url
   end
 end
